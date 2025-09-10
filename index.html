@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="kk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ерасыл — Веб-дизайнер</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #333
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: #fff;
+            text-align: center;
+            padding: 30px 15px
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 26px
+        }
+        
+        header p {
+            margin-top: 6px;
+            font-size: 15px
+        }
+        
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 14px
+        }
+        
+        .card {
+            background: #fff;
+            padding: 18px;
+            margin-bottom: 16px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08)
+        }
+        
+        h2 {
+            margin-top: 0;
+            color: #2E7D32
+        }
+        
+        ul {
+            padding-left: 20px
+        }
+        
+        .price-list li {
+            margin: 8px 0
+        }
+        
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 6px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px
+        }
+        
+        button {
+            background: #2E7D32;
+            color: #fff;
+            padding: 10px 16px;
+            border: 0;
+            border-radius: 8px;
+            cursor: pointer
+        }
+        
+        button:hover {
+            background: #256028
+        }
+        
+        footer {
+            text-align: center;
+            padding: 14px;
+            color: #888;
+            font-size: 13px;
+            margin-top: 20px
+        }
+        
+        .btn {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 8px 14px;
+            background: #4CAF50;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #2E7D32;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .service-box {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-box h3 {
+            margin-top: 0;
+            color: #2E7D32;
+        }
+        
+        .service-box strong {
+            display: block;
+            margin: 10px 0;
+            font-size: 18px;
+            color: #000;
+        }
+        
+        .btn {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 10px 16px;
+            background: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #2E7D32;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Ерасыл — Веб-дизайнер</h1>
+        <p>17 жастағы IT студент · Веб-дизайн тапсырыстарын қабылдаймын</p>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Мен туралы</h2>
+            <p>Атым <b>Ерасыл</b>. Колледжде IT мамандығы бойынша оқимын. Веб-дизайнға қызығамын, сайттар, макеттер және UI/UX бағытында жұмыс істеймін. Бос уақытымда тапсырыс қабылдап, тәжірибемді арттырып жүрмін.</p>
+        </div>
+
+        <div class="card">
+            <h2>Қызметтер мен бағалар</h2>
+            <ul class="price-list">
+                <li>🌐 Визитка-сайт (1 бет) — 8 000 ₸</li>
+                <li>📱 Мобильді адаптив сайт — 12 000 ₸</li>
+                <li>🎨 Figma макет (UX/UI дизайн) — 10 000 ₸</li>
+                <li>🛍 Онлайн-дүкен (қарапайым) — 15 000 ₸</li>
+                <li>⚡ Жеке тапсырыс — келісім бойынша</li>
+            </ul>
+            <p style="color:#666;font-size:14px">* Бағалар нарықтағыдан төмен, себебі тәжірибе жинап жүрмін 🙂</p>
+        </div>
+
+        <div class="card">
+            <h2>Тапсырыс беру</h2>
+            <form id="orderForm">
+                <input type="text" id="name" placeholder="Атыңыз" required>
+                <input type="text" id="service" placeholder="Қай қызмет керек?" required>
+                <textarea id="details" rows="3" placeholder="Қосымша ақпарат (қалауыңыз бойынша)"></textarea>
+                <button type="submit">WhatsApp арқылы жіберу</button>
+            </form>
+        </div>
+
+        <div class="card" id="services">
+            <h2 style="text-align:center; color:#2E7D32;">💼 Қызметтер мен бағалар</h2>
+            <p style="text-align:center;">Өзіңізге қажет қызметті таңдаңыз 👇</p>
+
+            <div class="services-grid">
+                <div class="service-box">
+                    <h3>🌐 Визитка-сайт</h3>
+                    <p>1 беттен тұратын қарапайым сайт</p>
+                    <strong>8 000 ₸</strong><br>
+                    <a class="btn" href="https://wa.me/77057099744?text=Сәлем,%20маған%20Визитка-сайт%20(1%20бет)%20қажет">Таңдау</a>
+                </div>
+
+                <div class="service-box">
+                    <h3>📱 Мобильді адаптив сайт</h3>
+                    <p>Телефонға 100% ыңғайланған</p>
+                    <strong>12 000 ₸</strong><br>
+                    <a class="btn" href="https://wa.me/77057099744?text=Сәлем,%20маған%20Мобильді%20адаптив%20сайт%20қажет">Таңдау</a>
+                </div>
+
+                <div class="service-box">
+                    <h3>🎨 Figma макет</h3>
+                    <p>UX/UI дизайн, макет дайындау</p>
+                    <strong>10 000 ₸</strong><br>
+                    <a class="btn" href="https://wa.me/77057099744?text=Сәлем,%20маған%20Figma%20макет%20қажет">Таңдау</a>
+                </div>
+
+                <div class="service-box">
+                    <h3>🛍 Онлайн-дүкен</h3>
+                    <p>Қарапайым интернет-дүкен</p>
+                    <strong>15 000 ₸</strong><br>
+                    <a class="btn" href="https://wa.me/77057099744?text=Сәлем,%20маған%20Онлайн-дүкен%20қажет">Таңдау</a>
+                </div>
+
+                <div class="service-box">
+                    <h3>⚡ Жеке тапсырыс</h3>
+                    <p>Кез келген веб-дизайн жұмысы</p>
+                    <strong>Келісім бойынша</strong><br>
+                    <a class="btn" href="https://wa.me/77057099744?text=Сәлем,%20маған%20Жеке%20тапсырыс%20туралы%20кеңесу%20қажет">Таңдау</a>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="map">
+            <h2 style="text-align:center; color:#2E7D32;">📍 Орналасқан жерім</h2>
+            <p style="text-align:center;">Строящийся жилой дом, Әуезов ауданы, Алматы, 050042</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2922.643172861705!2d76.85124881544244!3d43.23894907913747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836ef43a111111%3A0xaaaaaaaaaaaaaaa!2z0JDQstGC0L7RgNC-0LTQtdC90YLRgdC60LjQuSDQkNCi0LDRgNCw0L3QsNC70YzQvdCw0Y8g0LDQutCw0LfQuNC9!5e0!3m2!1skk!2skz!4v1694169093000"
+                width="100%" height="300" style="border:0; border-radius:12px; margin-top:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+        </div>
+        <div class="card" id="contact-form">
+            <h2 style="text-align:center; color:#2E7D32;">📩 Тапсырыс беру</h2>
+            <form onsubmit="sendToWhatsApp(); return false;">
+                <label>Атыңыз:</label><br>
+                <input type="text" id="name" required placeholder="Атыңызды жазыңыз"><br><br>
+
+                <label>Телефон:</label><br>
+                <input type="text" id="phone" required placeholder="+7..."><br><br>
+
+                <label>Қызмет түрі:</label><br>
+                <select id="service">
+      <option value="Визитка-сайт">🌐 Визитка-сайт</option>
+      <option value="Мобильді адаптив сайт">📱 Мобильді адаптив сайт</option>
+      <option value="Figma макет">🎨 Figma макет</option>
+      <option value="Онлайн-дүкен">🛍 Онлайн-дүкен</option>
+      <option value="Жеке тапсырыс">⚡ Жеке тапсырыс</option>
+    </select><br><br>
+
+                <label>Қосымша хабарлама:</label><br>
+                <textarea id="message" rows="3" placeholder="Қосымша талаптарыңыз"></textarea><br><br>
+
+                <button type="submit" class="btn">WhatsApp арқылы жіберу</button>
+            </form>
+        </div>
+        <script>
+            function sendToWhatsApp() {
+                let name = document.getElementById("name").value;
+                let phone = document.getElementById("phone").value;
+                let service = document.getElementById("service").value;
+                let message = document.getElementById("message").value;
+
+                let text = `Сәлем, мен тапсырыс бергім келеді:%0A👤 Аты-жөні: ${name}%0A📞 Телефон: ${phone}%0A💼 Қызмет: ${service}%0A📝 Хабарлама: ${message}`;
+
+                window.open("https://wa.me/77057099744?text=" + text, "_blank");
+            }
+        </script>
+
+        <div class="video-container" id="draggable-video">
+            <video autoplay muted loop playsinline>
+    <source src="c:\Users\Admin\Desktop\video.mp4.mp4" type="video/mp4">
+    Сіздің браузер видео ойнатуды қолдамайды.
+  </video>
+        </div>
+
+        <style>
+            .video-container {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 280px;
+                /* Кішірейтілген размер */
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                cursor: grab;
+                /* Қол сияқты белгі шығады */
+                z-index: 9999;
+            }
+            
+            .video-container video {
+                width: 100%;
+                height: auto;
+                display: block;
+                pointer-events: none;
+                /* Видеоға емес, контейнерге ұстаймыз */
+            }
+        </style>
+
+        <script>
+            const videoBox = document.getElementById("draggable-video");
+
+            let isDragging = false;
+            let offsetX, offsetY;
+
+            videoBox.addEventListener("mousedown", (e) => {
+                isDragging = true;
+                offsetX = e.clientX - videoBox.getBoundingClientRect().left;
+                offsetY = e.clientY - videoBox.getBoundingClientRect().top;
+                videoBox.style.cursor = "grabbing";
+            });
+
+            document.addEventListener("mousemove", (e) => {
+                if (!isDragging) return;
+                videoBox.style.left = e.clientX - offsetX + "px";
+                videoBox.style.top = e.clientY - offsetY + "px";
+                videoBox.style.bottom = "auto";
+                videoBox.style.right = "auto";
+            });
+
+            document.addEventListener("mouseup", () => {
+                isDragging = false;
+                videoBox.style.cursor = "grab";
+            });
+
+            // Телефонда жұмыс істеуі үшін (touch events)
+            videoBox.addEventListener("touchstart", (e) => {
+                isDragging = true;
+                offsetX = e.touches[0].clientX - videoBox.getBoundingClientRect().left;
+                offsetY = e.touches[0].clientY - videoBox.getBoundingClientRect().top;
+            });
+
+            document.addEventListener("touchmove", (e) => {
+                if (!isDragging) return;
+                videoBox.style.left = e.touches[0].clientX - offsetX + "px";
+                videoBox.style.top = e.touches[0].clientY - offsetY + "px";
+                videoBox.style.bottom = "auto";
+                videoBox.style.right = "auto";
+            });
+
+            document.addEventListener("touchend", () => {
+                isDragging = false;
+            });
+        </script>
+
+
+
+
+        <div class="card">
+            <h2>Байланыс</h2>
+            <p>📞 Телефон: <b>+7 705 709 9744</b></p>
+            <p>📧 Email: <a href="mailto:erasyl@mail.com">erasyl@mail.com</a></p>
+            <p>📱 WhatsApp: <a href="https://wa.me/77057099744" target="_blank">Тікелей жазу</a></p>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Ерасыл — Веб-дизайнер. Барлық құқықтар қорғалған.
+    </footer>
+
+    <script>
+        document.getElementById("orderForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const service = document.getElementById("service").value;
+            const details = document.getElementById("details").value;
+            const message = `Сәлем, мен тапсырыс бергім келеді:%0A👤 Аты: ${name}%0A🛠 Қызмет: ${service}%0A✍ Деталь: ${details}`;
+            window.open(`https://wa.me/77057099744?text=${message}`, "_blank");
+        });
+    </script>
+
+</body>
+
+</html>
